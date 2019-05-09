@@ -1,0 +1,35 @@
+{
+  "name": "rocketloans",
+  "version": "1.0.0",
+  "description": "Rocket Loans Financing",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "tsc && rollup dist/index.js --file dist/index.js --format umd --name 'rocketloans'",
+    "test": "mocha -r ts-node/register lib/**/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qloan/rocketloans-integration.git"
+  },
+  "author": "Rocket Loans",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/qloan/rocketloans-integration/issues"
+  },
+  "homepage": "https://github.com/qloan/rocketloans-integration#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jsdom": "^12.0.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/jsdom": "^12.2.3",
+    "@types/mocha": "^5.2.6",
+    "rollup": "^0.66.4",
+    "ts-node": "^7.0.1"
+  }
+}
