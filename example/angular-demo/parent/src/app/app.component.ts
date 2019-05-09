@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Styles, CallBacks, loadIFrame } from '../../../../../dist';
+import { CallBacks, loadIFrame } from '../../../../../dist';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent {
     this.JSON = JSON;
   }
   loadIFrame() {
-    const callback: CallBacks = {
+    const callbacks: CallBacks = {
       cancel: (event) => {
         console.log('This is a parent callback | cancel', event);
         const logger = document.getElementById('logger');
@@ -59,14 +59,8 @@ export class AppComponent {
       }
     };
 
-    const styles: Styles = {
-      height: 90,
-      width: 90,
-      hasBackdrop: true
-    };
-
     // http to rl to get link
 
-    loadIFrame(this.link, callback, styles);
+    loadIFrame(this.link, callbacks);
   }
 }

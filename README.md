@@ -20,8 +20,10 @@ Partners can enable contractors to offer financing for their clients.
 ### Angular example
 
 - cd example/angular-demo/parent
+- npm install
 - ng serve
 - cd ../child
+- npm install
 - ng serve --port 4201
 - click on parent app's launch IFrame button
 - click on any of the child's buttons to send a message that triggers the parent callbacks
