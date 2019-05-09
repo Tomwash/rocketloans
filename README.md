@@ -4,6 +4,12 @@ Partners can enable contractors to offer financing for their clients.
 
 [Become a Rocket Loans Partner and offer financing in your product!](https://rocketloans.com/developers)
 
+## Prerequisites
+
+- Npm
+- Node
+- Angular (optional for demo)
+
 ## Getting Started
 
 - clone this repo
@@ -26,14 +32,8 @@ Partners can enable contractors to offer financing for their clients.
 - open index.html in your browser
   - [Mac OS](https://superuser.com/questions/350309/how-can-i-open-a-url-in-google-chrome-from-the-terminal-in-os-x)
   - [Windows](https://superuser.com/questions/246825/open-file-from-the-command-line-on-windows)
-- click on parent app's launch IFrame button
+- click on parent app's 'Click Me To Show IFrame' button
 - click on any of the child's buttons to send a message that triggers the parent callbacks
-
-## Prerequisites
-
-```
-Npm & Node
-```
 
 ### Demo
 

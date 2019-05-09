@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../../dist/index.js"></script>
+    <script>
+        isIFrame = window !== window.top;
+        if (isIFrame) {
+            const div = document.getElementById('callbackExecutors');
+            if (div) {
+                div.append('<h1>I am an iframe!</h1>')
+            }
+        }
+
+        function IFrameCancel() {
+            alert('are you sure you want to cancel?');
+            parent.postMessage({
+                type: 'ROCKETLOANS_CANCEL',
+                payload: {
+                    public_token: 'adsljashfhaslkjdhfjlashd'
+                }
+            }, '*');
+        }
+
+        function IFrameSuccess() {
+            parent.postMessage({
+                type: 'ROCKETLOANS_SUCCESS',
+                payload: {}
+            }, '*');
+        }
+
+        function IFrameExit() {
+            parent.postMessage({
+                type: 'ROCKETLOANS_EXIT',
+                payload: {}
+            }, '*');
+        }
+
+        function IFrameError() {
+            parent.postMessage({
+                type: 'ROCKETLOANS_ERROR',
+                payload: {}
+            }, '*');
+        }
+
+        function IFrameEvent() {
+            parent.postMessage({
+                type: 'ROCKETLOANS_EVENT',
+                payload: {}
+            }, '*');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="callbackExecutors">
+        <button onclick="IFrameCancel()">Execute Parent's Cancel Method</button>
+        <button onclick="IFrameSuccess()">Execute Parent's Success Method</button>
+        <button onclick="IFrameError()">Execute Parent's Error Method</button>
+        <button onclick="IFrameEvent()">Execute Parent's Event Method</button>
+        <button onclick="IFrameExit()">Execute Parent's Exit Method</button>
+    </div>
+</body>
+
+</html>

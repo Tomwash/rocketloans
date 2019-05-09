@@ -8,31 +8,47 @@
             cancel: (event) => {
                 console.log('This is a parent callback | cancel', event)
                 var logger = document.getElementById('logger')
-                if(logger) logger.innerHTML = `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` + logger.innerHTML;
+                if (logger) logger.innerHTML =
+                    `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` +
+                    logger.innerHTML;
             },
             error: (event) => {
                 console.log('This is a parent callback | error', event)
-                if(logger) logger.innerHTML = `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` + logger.innerHTML;
+                if (logger) logger.innerHTML =
+                    `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` +
+                    logger.innerHTML;
             },
             events: (event) => {
                 console.log('This is a parent callback | event', event)
-                if(logger) logger.innerHTML = `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` + logger.innerHTML;
+                if (logger) logger.innerHTML =
+                    `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` +
+                    logger.innerHTML;
             },
             exit: (event) => {
                 console.log('This is a parent callback | exit', event)
-                if(logger) logger.innerHTML = logger.innerHTML = `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` + logger.innerHTML;
+                if (logger) logger.innerHTML = logger.innerHTML =
+                    `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` +
+                    logger.innerHTML;
             },
             success: (event) => {
                 console.log('This is a parent callback | success', event)
-                if(logger) logger.innerHTML = `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` + logger.innerHTML;
+                if (logger) logger.innerHTML =
+                    `${event.data.type} was fired from IFrame | payload: ${JSON.stringify(event.data.payload)} <br/>` +
+                    logger.innerHTML;
             }
+        }
+    </script>
+    <script>
+        function showIFrame() {
+            const input = document.getElementById('link')
+            rocketloans.loadIFrame(input.value, callback);
         }
     </script>
 </head>
 
 <body>
-    <input />
-    <button id="iframe-button" onclick="rocketloans.loadIFrame('http://localhost:4201',callback)">Click Me To Show
+    <input name="link" id="link" value='./child.html' />
+    <button id="iframe-button" onclick="showIFrame()">Click Me To Show
         IFrame</button>
     <div id="logger"></div>
 </body>

@@ -35,7 +35,7 @@ beforeEach((done) => {
     });
 })
 
-describe('loadIFrame function', () => {
+describe('Vanilla example test :: loadIFrame function', () => {
     it('Should assert the rocketloans object mounted properly on the jsdomObject', function (done) {
         assert.typeOf(jsdomObject.window.rocketloans.loadIFrame, 'function')
         done();
@@ -47,7 +47,7 @@ describe('loadIFrame function', () => {
         const rocketloansIframe = jsdomObject.window.document.getElementById('rocketloans-iframe')
         expect(rocketloansIframe).to.exist;
         expect(rocketloansIframe).to.be.a('htmliframeelement');
-        expect(rocketloansIframe.src).to.contain('localhost:4201');
+        expect(rocketloansIframe.src).to.contain('child.html');
         done();
     })
 });
