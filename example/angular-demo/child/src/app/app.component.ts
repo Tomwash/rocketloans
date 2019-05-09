@@ -14,9 +14,7 @@ export class AppComponent {
     alert('are you sure you want to cancel?');
     parent.postMessage({
       type: 'ROCKETLOANS_CANCEL',
-      payload: {
-        public_token: 'adsljashfhaslkjdhfjlashd'
-      }
+      payload: {}
     }, '*');
   }
   IFrameSuccess() {

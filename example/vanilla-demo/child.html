@@ -8,7 +8,7 @@
         if (isIFrame) {
             const div = document.getElementById('callbackExecutors');
             if (div) {
-                div.append('<h1>I am an iframe!</h1>')
+                div.appendChild('<h1>I am an iframe!</h1>')
             }
         }
 
@@ -16,9 +16,7 @@
             alert('are you sure you want to cancel?');
             parent.postMessage({
                 type: 'ROCKETLOANS_CANCEL',
-                payload: {
-                    public_token: 'adsljashfhaslkjdhfjlashd'
-                }
+                payload: {}
             }, '*');
         }
 
